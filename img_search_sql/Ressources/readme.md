@@ -1,4 +1,3 @@
-# SQL injection Images
 
 ### Breach Description:
 
@@ -9,12 +8,7 @@ ID: 1%27 OR 1=1 UNION SELECT comment, null FROM list_images
 Title:
 Url : If you read this just use this md5 decode lowercase then sha256 to win this flag ! : 1928e8083cf461a51303633093573c46
 ```
-
- 
-
-leads us to the Flag:
-
-10A16D834F9B1E4068B25C4C46FE0284E99E44DCEAF08098FC83925BA6310FF5
+leads us to the Flag
 
 ### Breach Explanation:
 

