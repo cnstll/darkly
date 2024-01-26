@@ -3,7 +3,7 @@
 ### Breach description
 
 We accessed sensitive directories that are supposed to be out of reach for the user. The exploit is based on using “../” to get to parent directories.
-
+This path works : "../../../../../../..//etc/passwd"
 ```python
 import requests
 

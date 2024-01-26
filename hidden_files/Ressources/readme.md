@@ -43,26 +43,12 @@ def follow_directory_link(url, depth=1):
             if href.lower() == 'readme':
                 # If the file is a README, save its content to agg_readme.txt
                 readme_response = requests.get(absolute_url)
-                save_readme_content(readme_response.content)
-
-            # For demonstration purposes, I'm printing the file link
-            file_response = requests.get(absolute_url)
-
-            # Specify the directory to save the files
-            save_directory = "your_save_directory"
-            os.makedirs(save_directory, exist_ok=True)
-
-            # Extract the filename from the URL
-            filename = os.path.basename(absolute_url)
-
-            # Save the file to the specified directory
-            with open(os.path.join(save_directory, filename), 'wb') as file:
-                file.write(file_response.content)
-
-def save_readme_content(content):
-    # Save the content to agg_readme.txt
-    with open("agg_readme.txt", 'ab') as readme_file:
-        readme_file.write(content)
+                print(readme_response.text)
+                if "flag" in readme_response.text:
+                    print("Flag found !!! ")
+                    print(readme_response.content)
+                    print(f"path: {absolute_url}")
+                    exit(1)
 
 # URL of the webpage
 base_url = "http://192.168.64.6/.hidden/"
